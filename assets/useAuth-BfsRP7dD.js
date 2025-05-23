@@ -1,0 +1,1 @@
+import{r}from"./index-gtzDq4NN.js";import{A as o}from"./AuthContext-DQW2-fEu.js";function n(){const t=r.useContext(o);if(t===void 0)throw new Error("useAuth must be used within an AuthProvider");return t}export{n as u};
