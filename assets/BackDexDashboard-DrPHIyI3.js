@@ -1,0 +1,1 @@
+import{j as r}from"./index-gtzDq4NN.js";import{L as t}from"./components-Cb_t2az9.js";function s(){return r.jsxs(t,{to:"/dex",className:"text-sm text-gray-400 hover:text-primary-light mb-2 inline-flex items-center",children:[r.jsx("div",{className:"i-mdi:arrow-left h-4 w-4 mr-1"}),"Back to DEX Dashboard"]})}export{s as B};
