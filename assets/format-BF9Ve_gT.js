@@ -1,0 +1,1 @@
+import{i as t}from"./i18n-DON_MyFc.js";const e=r=>{if(!r)return"--";const i=r.toLowerCase();return{public:t.t("distributor.public"),silver:t.t("distributor.silver"),gold:t.t("distributor.gold"),platinum:t.t("distributor.platinum"),diamond:t.t("distributor.diamond")}[i]||r.charAt(0).toUpperCase()+r.slice(1).toLowerCase()};export{e as f};

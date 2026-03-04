@@ -1,0 +1,8 @@
+import{e as o}from"./localizedRoute-CH8jRBiR.js";import"./index-CW68vc4o.js";import"./clsx-B8wMR7gX.js";import"./i18n-DON_MyFc.js";import"./jsx-runtime-D_zvdyIk.js";import"./utils-BM4zowIn.js";import"./index-DoZFbk36.js";import"./components-fMiyrNvb.js";const n=o`<svg fill="none" viewBox="0 0 14 15">
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="M13 7.99a1 1 0 0 1-1 1H4.4l2.46 2.46a1 1 0 1 1-1.41 1.41L1.29 8.7a1 1 0 0 1 0-1.41L5.46 3.1a1 1 0 0 1 1.41 1.42L4.41 6.99H12a1 1 0 0 1 1 1Z"
+    clip-rule="evenodd"
+  />
+</svg>`;export{n as arrowLeftSvg};
