@@ -1,0 +1,1 @@
+import{i as r}from"./i18n-z11IDdFV.js";const t=e=>{switch(e){case"daily":return r.t("board.period.daily");case"weekly":return r.t("board.period.weekly");case"30d":return r.t("board.period.30d");case"90d":return r.t("board.period.90d")}};export{t as g};

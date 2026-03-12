@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import"./i18n-z11IDdFV.js";import{g as s}from"./utils-BE4b9rEW.js";import{u as i,b as n,N as a}from"./index-DoZFbk36.js";import"./index-CW68vc4o.js";function f(){const{brokerId:r}=i(),{search:e}=n(),o=s();return r?t.jsx(a,{to:`/${o}/board/${r}${e}`,replace:!0}):t.jsx(a,{to:`/${o}/board${e}`,replace:!0})}export{f as default};
