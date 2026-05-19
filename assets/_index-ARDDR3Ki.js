@@ -1,0 +1,1 @@
+import{r as e}from"./index-CW68vc4o.js";import"./i18n-C4pTbKg_.js";import{g as a}from"./utils-Jcu59Fpt.js";import{a as o}from"./index-DoZFbk36.js";function m(){const r=o();return e.useEffect(()=>{const t=a();r(`/${t}`,{replace:!0})},[r]),null}export{m as default};
