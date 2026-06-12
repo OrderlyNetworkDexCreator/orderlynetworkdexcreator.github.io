@@ -1,0 +1,1 @@
+const o=e=>{try{const r=e.match(/github\.com\/[^\/]+\/([^\/]+)/);if(r&&r[1])return`https://dex.orderly.network/${r[1]}/`}catch(r){console.error("Error constructing deployment URL:",r)}return""};export{o as g};
