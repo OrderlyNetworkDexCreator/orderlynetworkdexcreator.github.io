@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin-setup
+Disallow: /settings
+Disallow: /.opencode/
+
+Sitemap: https://dex.orderly.network/sitemap.xml
