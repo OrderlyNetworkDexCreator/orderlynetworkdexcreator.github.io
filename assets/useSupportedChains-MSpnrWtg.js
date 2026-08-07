@@ -1,0 +1,6 @@
+import{a as d}from"./utils-B7qUQL_A.js";import{f as t}from"./index-Bos3xAHU.js";import{y as s,S as o,F as a}from"./orderly-DJnQ70Q3.js";(function(){try{var e=typeof window<"u"?window:typeof global<"u"?global:typeof globalThis<"u"?globalThis:typeof self<"u"?self:{};e.SENTRY_RELEASE={id:"2778c5828739799f4fdbf80f93ddc59dfb2850d9"};var n=new e.Error().stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="68752cf4-8a7e-43ea-9335-8487de654ec5",e._sentryDebugIdIdentifier="sentry-dbid-68752cf4-8a7e-43ea-9335-8487de654ec5")}catch{}})();/**
+ * @license lucide-react v0.525.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const i=[["path",{d:"M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2",key:"18mbvz"}],["path",{d:"M6.453 15h11.094",key:"3shlmq"}],["path",{d:"M8.5 2h7",key:"csnxdl"}]],u=d("flask-conical",i);function p(){const e=t("orderly-supported-mainnet-chains-demo",s,{dedupingInterval:o,revalidateOnFocus:!1});return{mainnetChains:e.data??[],testnetChains:a,supportedChains:e.data?[...e.data,...a]:[...a],chainsLoading:e.isLoading}}export{u as F,p as u};
