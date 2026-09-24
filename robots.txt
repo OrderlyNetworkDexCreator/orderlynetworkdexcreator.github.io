@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /.opencode/
+
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+Sitemap: https://dex.orderly.network/sitemap.xml

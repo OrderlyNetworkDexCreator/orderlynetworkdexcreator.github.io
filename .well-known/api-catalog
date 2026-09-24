@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://dex-api.orderly.network/",
+      "service-desc": [
+        {
+          "href": "https://dex-api.orderly.network/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://dex-api.orderly.network/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://dex-api.orderly.network/health",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

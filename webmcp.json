@@ -1,0 +1,194 @@
+{
+  "site": "Orderly One",
+  "spec": "WebMCP (https://webmachinelearning.github.io/webmcp/)",
+  "webmcpSupported": true,
+  "note": "This site exposes WebMCP tools. Browsers implementing document.modelContext discover them automatically; others can read this manifest or use window.orderlyWebMcp at runtime to list and invoke tools.",
+  "toolCount": 9,
+  "tools": [
+    {
+      "name": "get_site_overview",
+      "title": "Site Overview",
+      "description": "START HERE. Returns a map of this site: what it is, its areas, which tools back each area, common flows, parameter conventions, and the x402 graduation payment path. Call this once to get oriented before using the other tools. This is the Orderly One DEX Creator dashboard; tools are read-only data queries.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "search_markets",
+      "title": "search_markets",
+      "description": "Search Orderly perpetual futures markets. Returns live mark/index price, 24h change, volume, funding rate, and open interest for each match. Filter by symbol or broker name with `query`, or scope to one DEX with `broker_id`. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Case-insensitive substring matched against market symbol (e.g. 'BTC', 'PERP_ETH_USDC'), display symbol, broker id, or broker name."
+          },
+          "broker_id": {
+            "type": "string",
+            "description": "Restrict results to a single DEX/broker id."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Maximum number of markets to return (default 20)."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_market",
+      "title": "get_market",
+      "description": "Get a detailed snapshot of a single Orderly perpetual market by symbol (e.g. 'PERP_BTC_USDC'). Returns price, 24h high/low, volume, funding rate, and open interest. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "description": "Orderly perpetual market symbol, e.g. 'PERP_BTC_USDC'."
+          },
+          "broker_id": {
+            "type": "string",
+            "description": "Optional DEX/broker id scope."
+          }
+        },
+        "required": [
+          "symbol"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_chains",
+      "title": "list_chains",
+      "description": "List the blockchain networks supported by Orderly with their chain ids and deposit/withdraw status. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_builder_daily_stats",
+      "title": "get_builder_daily_stats",
+      "description": "Get the daily time series (perp volume, maker/taker volume, realized pnl, broker fees) for a specific DEX (builder). Requires the DEX's `broker_id`. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "broker_id": {
+            "type": "string",
+            "description": "The DEX/broker id to fetch daily stats for."
+          }
+        },
+        "required": [
+          "broker_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_dexes",
+      "title": "list_dexes",
+      "description": "List DEXes built on Orderly One, ranked by volume. Returns broker id/name, volume (period + 30d), trader count, tier, logo, and associated token info. Paginated. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Page size (default 20)."
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Pagination offset (default 0)."
+          },
+          "period": {
+            "type": "string",
+            "description": "Volume window. One of: today, daily, weekly, 30d, 90d."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_dex_details",
+      "title": "get_dex_details",
+      "description": "Get full details for one Orderly One DEX by `broker_id`: profile, aggregated volume/pnl/fees, and a daily time series. `period` controls the daily series aggregation window. Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "broker_id": {
+            "type": "string",
+            "description": "The DEX broker id."
+          },
+          "period": {
+            "type": "string",
+            "description": "Volume window. One of: today, daily, weekly, 30d, 90d. Default 'weekly'."
+          }
+        },
+        "required": [
+          "broker_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_dex_stats",
+      "title": "get_dex_stats",
+      "description": "Get platform-wide Orderly One totals: number of DEXes, graduated DEXes, and demo DEXes (all-time and new within the period). Read-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "description": "Volume window. One of: today, daily, weekly, 30d, 90d. Default '30d'."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_orderly_stats",
+      "title": "get_orderly_stats",
+      "description": "Get Orderly Network dashboard aggregates (overall network volume, trades, open interest, etc.). Read-only network stats.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    }
+  ]
+}
